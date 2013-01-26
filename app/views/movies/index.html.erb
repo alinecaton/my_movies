@@ -1,0 +1,18 @@
+<%= link_to "Add Movie", new_movie_path %>
+
+<div id='movies'>
+  <% @movies.each do |movie| %>
+  <div class='movie'>
+    <span><%= link_to movie.title, movie %></span>
+    <div class='poster'>
+      <%= link_to image_tag(movie.poster_url, :alt => 'poster'), movie %>
+    </div>
+    <%= link_to "Edit", edit_movie_path(movie) %>
+    <%= link_to "Delete", movie_path(movie), :method => :delete, :confirm => "Are you sure you want to delete this movie?" %>
+  </div>
+  <% end %>
+</div>
+
+<div id="total">
+  <p>Total de filmes: <%= @movies.count %></p>
+</div>

@@ -1,0 +1,39 @@
+/*
+ *= require_self
+ *= require_tree .
+*/
+
+body{
+  background-image:url('lgrey024.jpg');
+  margin-left: 30px;
+}
+
+header{
+  text-align: center;
+}
+
+main{
+  font-size: 25px;
+  margin: 0 80px;
+}
+
+#form{
+  text-align: center;
+}
+
+#movies .movie{
+  float: left;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+}
+
+#total{
+  clear: both;
+}
+
+#content_show{
+  text-align: center;
+}
+
+

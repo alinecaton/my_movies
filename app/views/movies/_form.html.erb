@@ -1,0 +1,33 @@
+<%= form_for @movie do |f| %>
+<div id='form'>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :summary %>
+    <br>
+    <%= f.text_area :summary , :rows => 5 %>
+  </p>
+
+  <p>
+    <%= f.label :release_year %>
+    <%= f.select :release_year, (1900..Date.today.year + 1).to_a, :include_blank => true %>
+  </p>
+
+  <p>
+    <%= f.label :poster_url %>
+    <%= f.text_field :poster_url %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+  <p>
+    <%= link_to "Back", movies_path %>
+  </p>
+
+  <% end %>
+</div>
